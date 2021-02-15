@@ -2,13 +2,13 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np
 
-def drawlinear(seta0, seta1, value_x):    
+def hypothesis(seta0, seta1, value_x):    
     return seta0+(seta1*value_x)
 
 lineardata = {'x':[],'y':[]}
 for x in np.arange(0,10,1):
     lineardata['x'].append(x)
-    lineardata['y'].append(drawlinear(-569.6, -530.9, x))
+    lineardata['y'].append(hypothesis(-569.6, -530.9, x))
 
 lineardata_df = pd.DataFrame(lineardata)
 testdata = {'x':[1,2,2,3,3,4,5,6,6,6,8,10],
