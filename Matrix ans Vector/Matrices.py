@@ -36,3 +36,18 @@ print(A*3)
 # [0.66666667 1.66666667]
 # [1.         0.33333333]]
 print(A/3)
+# 5. Vector Multiplication
+C = np.matrix([[2], [3]])
+# 결과
+# [[ 2]
+# [19]
+# [ 9]]
+print(A*C)
+# Vector와 곱하면 Vector가 된다.
+# 6. Matrix Multiplication
+# 결과
+# [[ 1  2  3]
+# [17 24 31]
+# [ 6 10 14]]
+D = np.matrix([[1, 2, 3], [3, 4, 5]])
+print(A*D)
