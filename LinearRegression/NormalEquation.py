@@ -43,5 +43,12 @@ print(theta)
 # 테스트
 test = pd.DataFrame(pd.read_csv(
     "ML-Study/LinearRegression/HousePrices/test.csv"), columns=["x0", "LotArea", "BedroomAbvGr", "YearBuilt", "SalePrice"])
-train["YearBuilt"] = 2021-train["YearBuilt"]
-train["x0"] = 1
+test["YearBuilt"] = 2021-test["YearBuilt"]
+test["x0"] = 1
+X = test[["x0", "LotArea", "BedroomAbvGr", "YearBuilt"]].values
+Y = test[["SalePrice"]].values
+h = np.dot(theta.T, X.T)
+print(h)
+print(test)
+# from sklearn.metrics import mean_absolute_error# 모델을 평가해주는 모듈
+# mae = mean_absolute_error(test_y, pred_y)
